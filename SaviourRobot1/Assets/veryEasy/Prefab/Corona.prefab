@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4328880035814495232}
   - component: {fileID: 7195638208884876073}
   - component: {fileID: -6086690633381162670}
+  - component: {fileID: 5879200015875442931}
   m_Layer: 0
-  m_Name: VirusCharacter
+  m_Name: Corona
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,3 +99,17 @@ CircleCollider2D:
   m_Offset: {x: -0.09532714, y: 0}
   serializedVersion: 2
   m_Radius: 0.95764923
+--- !u!114 &5879200015875442931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8980919798637771256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a9a42e935803e418c6b171c76bbabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thePlayer: {fileID: 3366585883332813958, guid: 831be74ef270e7648876e3501d4aa044,
+    type: 3}
