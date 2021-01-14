@@ -6,19 +6,21 @@ using TMPro;
 
 public class player : MonoBehaviour
 {
-    public Rigidbody2D thePlayer;
-    public GameObject[] theHeart;
-    public TextMeshProUGUI theStatus;
-    public GameObject theDrone;
-    public GameObject theCorona;
-    public GameObject toEasybtn;
-
+    [Header("Reference")]
+    public Rigidbody2D thePlayer;//Rigidbody of player reference
+    public GameObject[] theHeart;//Heart gameobject reference
+    public TextMeshProUGUI theStatus;//GUI Text refernce
+    public GameObject theDrone;//Enemy (drone) reference
+    public GameObject theCorona;//Enemy (corona) reference
+    public GameObject toEasybtn;//initially reference for next scene button only but now for a whole panel and everything inside it
+    [Header("Value")]
     public float jumpForce;
     public float life;
     public float minY, maxY;
     public float distance;
     public float countDown;
-
+    public float spawnTimer;
+    [Header("Boolean")]
     public bool startGame;
     public bool winGame=false;
     void Start()
@@ -27,8 +29,6 @@ public class player : MonoBehaviour
         toEasybtn.SetActive(false);
         gameOn();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if ((Input.GetButtonDown("Jump")))
@@ -58,7 +58,7 @@ public class player : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(spawnTimer);
             float yCorona = Random.Range(minY, maxY);
             float yDrone = Random.Range(-minY, -maxY);
 

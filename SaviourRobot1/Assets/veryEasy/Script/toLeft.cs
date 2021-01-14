@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class toLeft : MonoBehaviour
 {
-    public GameObject thePlayer;
-    player playerScript;
+    public GameObject thePlayer;//Player gameObject reference
+    player playerScript;//Script in player Reference
+    public float sideForce;//Alter in editor for enemy speed 
     void Start()
     {
-        playerScript = thePlayer.GetComponent<player>();
+        playerScript = thePlayer.GetComponent<player>();//referencing script from player
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left*30*Time.deltaTime);
-        if(transform.position.x<=-10)
+        transform.Translate(Vector2.left*sideForce*Time.deltaTime);//move sideways to the left
+        if(transform.position.x<=-10)//if beyond the view
         {
             Destroy(this.gameObject);
         }
         
-        if(playerScript.startGame==true)
+        if(playerScript.startGame==true)//if win the game
         {
             Destroy(this.gameObject);
         }

@@ -2345,6 +2345,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3366585883332813953, guid: 831be74ef270e7648876e3501d4aa044,
         type: 3}
+      propertyPath: distance
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366585883332813953, guid: 831be74ef270e7648876e3501d4aa044,
+        type: 3}
       propertyPath: theStatus
       value: 
       objectReference: {fileID: 1886996141}
@@ -2353,6 +2358,11 @@ PrefabInstance:
       propertyPath: toEasybtn
       value: 
       objectReference: {fileID: 466091396}
+    - target: {fileID: 3366585883332813953, guid: 831be74ef270e7648876e3501d4aa044,
+        type: 3}
+      propertyPath: spawnTimer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3366585883332813953, guid: 831be74ef270e7648876e3501d4aa044,
         type: 3}
       propertyPath: theHeart.Array.data[0]
