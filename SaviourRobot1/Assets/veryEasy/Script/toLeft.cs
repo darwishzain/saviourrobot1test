@@ -6,12 +6,11 @@ public class toLeft : MonoBehaviour
 {
     public GameObject thePlayer;//Player gameObject reference
     player playerScript;//Script in player Reference
-    public float sideForce;//Alter in editor for enemy speed 
+    public float sideForce;//Alter in editor for enemy speed
     void Start()
     {
         playerScript = thePlayer.GetComponent<player>();//referencing script from player
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -20,12 +19,10 @@ public class toLeft : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        
+
         if(playerScript.startGame==true)//if win the game
         {
             Destroy(this.gameObject);
         }
-        
-
     }
 }
